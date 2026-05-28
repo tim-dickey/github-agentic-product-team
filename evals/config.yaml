@@ -44,6 +44,15 @@ suites:
       - drift
       - variance
 
+  - name: issue-triage-extra-eval-cases
+    dataset: evals/datasets/issue-triage-extra-eval-cases.jsonl
+    rubric: evals/rubrics/issue-triage-rubric.yaml
+    graders:
+      - deterministic
+      - quality
+      - drift
+      - variance
+
   - name: workflow-safety
     dataset: evals/datasets/workflow-safety.jsonl
     rubric: evals/rubrics/safety-rubric.yaml
