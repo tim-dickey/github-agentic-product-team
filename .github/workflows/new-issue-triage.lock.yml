@@ -1,0 +1,9 @@
+# Generated artifact placeholder.
+# Generate in a real repository with:
+# gh extension install github/gh-aw
+# gh aw compile .github/workflows/new-issue-triage.md
+name: new-issue-triage
+on:
+  issues:
+    types: [opened, edited]
+jobs: {}

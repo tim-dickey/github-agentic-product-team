@@ -1,0 +1,8 @@
+# Generated artifact placeholder.
+# Compile from the markdown workflow file with gh aw compile.
+name: weekly-backlog-hygiene
+on:
+  schedule:
+    - cron: "0 15 * * 1"
+  workflow_dispatch: {}
+jobs: {}

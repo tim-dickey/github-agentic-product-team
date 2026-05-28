@@ -1,0 +1,22 @@
+type:
+  - type:bug
+  - type:feature
+  - type:support
+  - type:docs
+  - type:duplicate
+
+area:
+  - area:web
+  - area:admin
+  - area:api
+  - area:auth
+  - area:billing
+  - area:notifications
+  - area:analytics
+  - area:docs
+
+severity:
+  - severity:critical
+  - severity:high
+  - severity:medium
+  - severity:low

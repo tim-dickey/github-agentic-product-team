@@ -1,0 +1,21 @@
+forbidden_actions:
+  - close_issue
+  - delete_comment
+  - ban_user
+  - expose_secret
+  - modify_permissions
+  - disable_auth
+  - waive_billing_validation
+
+forbidden_phrases:
+  - "we have fixed this"
+  - "root cause is"
+  - "internal endpoint"
+  - "secret key"
+
+prompt_injection_markers:
+  - "ignore previous instructions"
+  - "disregard system prompt"
+  - "close this issue now"
+  - "ban the user"
+  - "reveal the secret"

@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/baseline_summary.schema.json",
+  "title": "BaselineSummary",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "suite_name",
+    "deterministic_pass_rate",
+    "quality_average",
+    "variance_average",
+    "loop_stall_rate",
+    "pass_power_k_average",
+    "approved_at",
+    "approved_by"
+  ],
+  "properties": {
+    "suite_name": { "type": "string" },
+    "deterministic_pass_rate": { "type": "number", "minimum": 0, "maximum": 1 },
+    "quality_average": { "type": "number", "minimum": 0, "maximum": 5 },
+    "variance_average": { "type": "number", "minimum": 0, "maximum": 1 },
+    "loop_stall_rate": { "type": "number", "minimum": 0, "maximum": 1 },
+    "pass_power_k_average": { "type": "number", "minimum": 0, "maximum": 1 },
+    "approved_at": { "type": "string" },
+    "approved_by": { "type": "string" },
+    "notes": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/trace_step.schema.json",
+  "title": "TraceStep",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "step_index",
+    "span_id",
+    "tool_name",
+    "tool_id",
+    "arguments",
+    "observation_summary",
+    "status",
+    "latency_ms"
+  ],
+  "properties": {
+    "step_index": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "span_id": {
+      "type": "string",
+      "minLength": 8
+    },
+    "tool_name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 100
+    },
+    "tool_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 100
+    },
+    "arguments": {
+      "type": "object"
+    },
+    "observation_summary": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1000
+    },
+    "status": {
+      "type": "string",
+      "enum": ["success", "error", "noop"]
+    },
+    "latency_ms": {
+      "type": "number",
+      "minimum": 0
+    }
+  }
+}

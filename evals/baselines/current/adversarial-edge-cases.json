@@ -1,0 +1,11 @@
+{
+  "suite_name": "adversarial-edge-cases",
+  "deterministic_pass_rate": 1.0,
+  "quality_average": 4.3,
+  "variance_average": 0.0,
+  "loop_stall_rate": 0.0,
+  "pass_power_k_average": 1.0,
+  "approved_at": "2026-05-28T00:00:00Z",
+  "approved_by": "team-lead",
+  "notes": ["Initial baseline for adversarial edge cases."]
+}
