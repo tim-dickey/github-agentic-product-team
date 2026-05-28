@@ -1,0 +1,62 @@
+name: Feature request
+description: Suggest an improvement to workflows, skills, evals, docs, or repository structure.
+title: "[Feature]: "
+labels:
+  - type:feature
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting an improvement.
+
+        The most useful requests are grounded in a real maintainer, product team, or contributor problem.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to solve
+      description: What pain point or gap does this request address?
+      placeholder: Explain the current problem clearly.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: What would you like to see added or changed?
+      placeholder: Describe the desired workflow, skill, doc, or eval improvement.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Any simpler or different options already considered?
+
+  - type: dropdown
+    id: target
+    attributes:
+      label: Primary target area
+      options:
+        - .github/workflows
+        - agent-skills
+        - evals
+        - docs
+        - repository process
+        - community health
+        - other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: contribution
+    attributes:
+      label: Are you planning to contribute a draft?
+      options:
+        - yes
+        - maybe
+        - no
+    validations:
+      required: true

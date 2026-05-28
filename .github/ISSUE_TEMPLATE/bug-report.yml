@@ -1,0 +1,95 @@
+name: Bug report
+description: Report a problem with a workflow, skill, eval, schema, policy, or repository guidance.
+title: "[Bug]: "
+labels:
+  - type:bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug.
+
+        Please focus on observable behavior. If this issue involves a security-sensitive behavior, prompt-injection path, secret exposure, or unsafe side effect, do not file it publicly. Use the process in `SECURITY.md` instead.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      description: Which part of the repository is affected?
+      options:
+        - .github/workflows
+        - agent-skills
+        - evals/datasets
+        - evals/schemas
+        - evals/tools
+        - evals/policies
+        - docs
+        - repo guidance
+        - other
+    validations:
+      required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What is wrong?
+      placeholder: A short description of the problem.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: List the smallest set of steps needed to reproduce the problem.
+      placeholder: |
+        1. Go to ...
+        2. Run ...
+        3. Observe ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      placeholder: What should have happened?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      placeholder: What happened instead?
+    validations:
+      required: true
+
+  - type: textarea
+    id: examples
+    attributes:
+      label: Logs, traces, prompts, or sample inputs
+      description: Include only safe, non-secret examples.
+      render: shell
+
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Impact
+      options:
+        - low
+        - medium
+        - high
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I confirmed this is not a security-sensitive issue that should be reported privately.
+          required: true
+        - label: I searched for existing issues before filing this report.
+          required: true
