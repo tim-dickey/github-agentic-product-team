@@ -5,8 +5,29 @@
 
 version: 2
 updates:
-  - package-ecosystem: "" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: "pip"
+    directory: "/evals"
     schedule:
       interval: "weekly"
-    
+    labels:
+      - "dependencies"
+      - "evals"
+    open-pull-requests-limit: 5
+    groups:
+      eval-deps:
+        patterns:
+          - "*"
+    commit-message:
+      prefix: "deps(evals)"
+      include: "scope"
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "dependencies"
+      - "ci"
+    commit-message:
+      prefix: "deps(ci)"
+      include: "scope"
